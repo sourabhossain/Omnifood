@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-html, 
+html,
 body {
     background-color: #ffffff;
     color: #555555;
@@ -27,17 +27,84 @@ body {
     margin: 0 auto;
 }
 
+section {
+    padding: 80px 0;
+}
+
 /* ---------- HEADINGS ---------- */
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
 
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #ffffff;
     font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 4px;
     word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/* ---------- PARAGRAPHS ---------- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+    text-align: justify;
+}
+
+/* ---------- ICONS ---------- */
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
 }
 
 /* ---------- BUTTONS ---------- */
@@ -53,11 +120,11 @@ h1 {
     -moz-border-radius: 200px;
     -ms-border-radius: 200px;
     -o-border-radius: 200px;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
-    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    -moz-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    -ms-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    -o-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
+    -webkit-transition: background-color 0.5s, border 0.5s, color 0.5s;
+    -moz-transition: background-color 0.5s, border 0.5s, color 0.5s;
+    -ms-transition: background-color 0.5s, border 0.5s, color 0.5s;
+    -o-transition: background-color 0.5s, border 0.5s, color 0.5s;
 }
 
 .btn:hover,
@@ -95,59 +162,118 @@ h1 {
  * HEADER                                 *
  *----------------------------------------*/
 
- header {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
-     background-size: cover;
-     background-position: center;
-     height: 100vh;
- }
-
- .hero-text-box {
-     position: absolute;
-     width: 1140px;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-     -ms-transform: translate(-50%, -50%);
-     -o-transform: translate(-50%, -50%);
- }
-
- .logo {
-     height: 100px;
-     width: auto;
-     float: left;
-     margin-top: 20px;
- }
-
- .main-nav {
-     float: right;
-     list-style: none;
-     margin-top: 55px;
- }
-
- .main-nav li {
-     display: inline-block;
-     margin-left: 40px;
- }
-
- .main-nav li a:link,
- .main-nav li a:visited {
-     padding: 8px 0;
-     color: #ffffff;
-     text-decoration: none;
-     text-transform: uppercase;
-     font-size: 90%;
-     border-bottom: 2px solid transparent;
-     transition: border-bottom 0.2s;
-     -webkit-transition: border-bottom 0.2s;
-     -moz-transition: border-bottom 0.2s;
-     -ms-transition: border-bottom 0.2s;
-     -o-transition: border-bottom 0.2s;
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
- .main-nav li a:hover,
- .main-nav li a:active {
-     border-bottom: 2px solid #e67e22;
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+    -webkit-transition: border-bottom 0.5s;
+    -moz-transition: border-bottom 0.5s;
+    -ms-transition: border-bottom 0.5s;
+    -o-transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
+/*-----------------------------------------* 
+ * MEALS                                   *
+ *-----------------------------------------*/
+ 
+.section-features .long-copy {
+    margin-bottom: 30px;
+} 
+
+ /*-----------------------------------------* 
+ * MEALS                                   *
+ *-----------------------------------------*/
+
+ .section-meals {
+     padding: 0;
  }
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    -webkit-transition: transform 0.5s, opacity 0.5s;
+    -moz-transition: transform 0.5s, opacity 0.5s;
+    -ms-transition: transform 0.5s, opacity 0.5s;
+    -o-transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
