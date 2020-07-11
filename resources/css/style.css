@@ -317,8 +317,8 @@ header {
 }
 
 /*-----------------------------------------* 
-  * MEALS                                   *
-  *-----------------------------------------*/
+ * MEALS                                   *
+ *-----------------------------------------*/
 
 .section-meals {
     padding: 0;
@@ -384,6 +384,7 @@ header {
 }
 
 .steps-box:last-child {
+    text-align: left;
     padding-left: 3%;
     margin-top: 70px;
 }
