@@ -449,7 +449,6 @@ header {
  *-----------------------------------------*/
 
 .section-testimonials {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
     background-size: cover;
     color: #ffffff;
@@ -670,3 +669,24 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
+
+/*-----------------------------------------* 
+ * ANIMATIONS                              *
+ *-----------------------------------------*/
+
+ .js--wp-1,
+ .js--wp-2,
+ .js--wp-3 {
+     opacity: 0;
+     animation-duration: 1s;
+ }
+
+ .js--wp-4 {
+     animation-duration: 1s;
+ }
+
+ .js--wp-1 .animated, 
+ .js--wp-2 .animated, 
+ .js--wp-3 .animated {
+     opacity: 1;
+ }
