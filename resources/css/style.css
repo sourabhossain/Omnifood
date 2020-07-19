@@ -1,6 +1,6 @@
-/*----------------------------------------* 
- * BASIC SETUP                            *
- *----------------------------------------*/
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
 
 * {
     margin: 0;
@@ -10,8 +10,8 @@
 
 html,
 body {
-    background-color: #ffffff;
-    color: #555555;
+    background-color: #fff;
+    color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -23,17 +23,18 @@ body {
     zoom: 1;
 }
 
-.clearfix::after {
-    content: ".";
+.clearfix:after {
+    content: '.';
     clear: both;
     display: block;
     height: 0;
     visibility: hidden;
 }
 
-/*----------------------------------------* 
- * REUSABLE COMPONENTS                    *
- *----------------------------------------*/
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
 
 .row {
     max-width: 1140px;
@@ -48,8 +49,7 @@ section {
     padding: 1%;
 }
 
-/* ---------- HEADINGS ---------- */
-
+/* ----- HEADINGS ----- */
 h1,
 h2,
 h3 {
@@ -60,7 +60,7 @@ h3 {
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #fff;
     font-size: 240%;
     word-spacing: 4px;
     letter-spacing: 1px;
@@ -74,6 +74,11 @@ h2 {
     letter-spacing: 1px;
 }
 
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
 h2:after {
     display: block;
     height: 2px;
@@ -84,13 +89,7 @@ h2:after {
     margin-top: 30px;
 }
 
-h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
-}
-
-/* ---------- PARAGRAPHS ---------- */
-
+/* ----- PARAGRAPHS ----- */
 .long-copy {
     line-height: 145%;
     width: 70%;
@@ -100,11 +99,10 @@ h3 {
 .box p {
     font-size: 90%;
     line-height: 145%;
-    text-align: justify;
 }
 
-/* ---------- ICONS ---------- */
 
+/* ----- ICONS ----- */
 .icon-big {
     font-size: 350%;
     display: block;
@@ -119,12 +117,14 @@ h3 {
     color: #e67e22;
     font-size: 120%;
     margin-right: 10px;
+
+    /*secrets to align text and icons*/
     line-height: 120%;
     vertical-align: middle;
     margin-top: -5px;
 }
 
-/* ----------- LINKS ----------- */
+/* ----- LINKS ----- */
 
 a:link,
 a:visited {
@@ -132,38 +132,27 @@ a:visited {
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid #e67e22;
-    transition: border-bottom 0.5s, color 0.5s;
-    -webkit-transition: border-bottom 0.5s, color 0.5s;
-    -moz-transition: border-bottom 0.5s, color 0.5s;
-    -ms-transition: border-bottom 0.5s, color 0.5s;
-    -o-transition: border-bottom 0.5s, color 0.5s;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
 }
 
 a:hover,
 a:active {
-    color: #555555;
+    color: #555;
     border-bottom: 1px solid transparent;
 }
 
-/* ---------- BUTTONS ---------- */
-
+/* ----- BUTTONS ----- */
 .btn:link,
 .btn:visited,
 input[type=submit] {
-     display: inline-block;
-     padding: 10px 30px;
-     font-weight: 300;
-     text-decoration: none;
-     transition: background-color 0.2s, border 0.2s, color 0.2s;
-     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-     -moz-transition: background-color 0.2s, border 0.2s, color 0.2s;
-     -ms-transition: background-color 0.2s, border 0.2s, color 0.2s;
-     -o-transition: background-color 0.2s, border 0.2s, color 0.2s;
-     border-radius: 200px;
-     -webkit-border-radius: 200px;
-     -moz-border-radius: 200px;
-     -ms-border-radius: 200px;
-     -o-border-radius: 200px;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .btn-full:link,
@@ -199,12 +188,14 @@ input[type=submit]:active {
     color: #fff;
 }
 
-/*----------------------------------------* 
- * HEADER                                 *
- *----------------------------------------*/
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -216,11 +207,9 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -238,6 +227,7 @@ header {
     margin: 5px 0;
 }
 
+/* Main navi */
 .main-nav {
     float: right;
     list-style: none;
@@ -252,16 +242,13 @@ header {
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 8px 0;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.5s;
-    -webkit-transition: border-bottom 0.5s;
-    -moz-transition: border-bottom 0.5s;
-    -ms-transition: border-bottom 0.5s;
-    -o-transition: border-bottom 0.5s;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover,
@@ -269,6 +256,8 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
+
+/* Mobile navi */
 .mobile-nav-icon {
     float: right;
     margin-top: 30px;
@@ -278,8 +267,11 @@ header {
 
 .mobile-nav-icon i {
     font-size: 200%;
+    color: #fff;
 }
 
+
+/* Sticky navi */
 .sticky {
     position: fixed;
     top: 0;
@@ -297,28 +289,29 @@ header {
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
     padding: 16px 0;
-    color: #555555;
+    color: #555;
 }
 
 .sticky .logo {
     display: none;
 }
 
-.sticky .long-black {
+.sticky .logo-black {
     display: block;
 }
 
-/*-----------------------------------------* 
- * FEATURES                                   *
- *-----------------------------------------*/
+/* ----------------------------------------------- */
+/* FEATURES */
+/* ----------------------------------------------- */
 
 .section-features .long-copy {
     margin-bottom: 30px;
 }
 
-/*-----------------------------------------* 
- * MEALS                                   *
- *-----------------------------------------*/
+
+/* ----------------------------------------------- */
+/* MEALS */
+/* ----------------------------------------------- */
 
 .section-meals {
     padding: 0;
@@ -339,37 +332,33 @@ header {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    background-color: #000000;
+    background-color: #000;
 }
 
 .meal-photo img {
     opacity: 0.7;
     width: 100%;
     height: auto;
-    transform: scale(1.15);
     -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
     -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
     transition: transform 0.5s, opacity 0.5s;
-    -webkit-transition: transform 0.5s, opacity 0.5s;
-    -moz-transition: transform 0.5s, opacity 0.5s;
-    -ms-transition: transform 0.5s, opacity 0.5s;
-    -o-transition: transform 0.5s, opacity 0.5s;
 }
 
 .meal-photo img:hover {
     opacity: 1;
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
-/*-----------------------------------------* 
- * HOW IT WORKS                            *
- *-----------------------------------------*/
+
+
+/* ----------------------------------------------- */
+/* HOW IT WORKS SECTION */
+/* ----------------------------------------------- */
+
 .section-steps {
     background-color: #f4f4f4;
 }
@@ -377,6 +366,7 @@ header {
 .steps-box {
     margin-top: 30px;
 }
+
 
 .steps-box:first-child {
     text-align: right;
@@ -403,20 +393,16 @@ header {
 
 .works-step div {
     color: #e67e22;
-    border: 2px solid #e67e22;
-    display: inline-block;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    height: 55px;
-    width: 55px;
-    text-align: center;
-    padding: 5px;
-    float: left;
     font-size: 150%;
+    height: 54px;
+    width: 54px;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
     margin-right: 25px;
+    float: left;
+    padding: 5px;
 }
 
 .btn-app:link,
@@ -430,9 +416,10 @@ header {
     margin-right: 10px;
 }
 
-/*-----------------------------------------* 
- * CITIES                                  *
- *-----------------------------------------*/
+
+/* ----------------------------------------------- */
+/* CITIES */
+/* ----------------------------------------------- */
 
 .box img {
     width: 100%;
@@ -444,14 +431,16 @@ header {
     margin-bottom: 5px;
 }
 
-/*-----------------------------------------* 
- * TESTIMONIALS                            *
- *-----------------------------------------*/
+
+/* ----------------------------------------------- */
+/* TESTIMONIALS */
+/* ----------------------------------------------- */
 
 .section-testimonials {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-size: cover;
-    color: #ffffff;
+    color: #fff;
     background-attachment: fixed;
 }
 
@@ -461,7 +450,6 @@ blockquote {
     line-height: 145%;
     position: relative;
     margin-top: 40px;
-    text-align: justify;
 }
 
 blockquote:before {
@@ -481,30 +469,23 @@ cite {
 
 cite img {
     height: 45px;
+    border-radius: 50%;
     margin-right: 10px;
     vertical-align: middle;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 }
 
-/*-----------------------------------------* 
- * SIGN UP                                 *
- *-----------------------------------------*/
+
+/* ----------------------------------------------- */
+/* SIGN UP */
+/* ----------------------------------------------- */
 
 .section-plans {
     background-color: #f4f4f4;
 }
 
 .plan-box {
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     width: 90%;
     margin-left: 5%;
     box-shadow: 0 2px 2px #efefef;
@@ -525,6 +506,7 @@ cite img {
     text-align: center;
     border: 0;
 }
+
 
 .plan-price {
     font-size: 300%;
@@ -550,34 +532,35 @@ cite img {
     padding: 5px 0;
 }
 
-/*-----------------------------------------* 
- * FORM                                    *
- *-----------------------------------------*/
+
+/* ----------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------- */
 
 .contact-form {
-     width: 60%;
-     margin: 0 auto;
+    width: 60%;
+    margin: 0 auto;
 }
 
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 select,
 textarea {
     width: 100%;
     padding: 7px;
+    border: 1px solid #ccc;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    border: 1px solid #cccccc;
 }
 
 textarea {
     height: 100px;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
 
@@ -585,12 +568,13 @@ input[type="checkbox"] {
     outline: none;
 }
 
-/*-----------------------------------------* 
- * FOOTER                                  *
- *-----------------------------------------*/
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
 
 footer {
-    background-color: #333333;
+    background-color: #333;
     padding: 50px;
     font-size: 80%;
 }
@@ -622,11 +606,9 @@ footer {
 .social-links li a:visited {
     text-decoration: none;
     border: 0;
-    transition: color 0.2s;
+    color: #888;
     -webkit-transition: color 0.2s;
-    -moz-transition: color 0.2s;
-    -ms-transition: color 0.2s;
-    -o-transition: color 0.2s;
+    transition: color 0.2s;
 }
 
 .footer-nav li a:hover,
@@ -663,30 +645,32 @@ footer {
     color: #517fa4;
 }
 
-
 footer p {
-    color: #888;
+    color: #888888;
     text-align: center;
     margin-top: 20px;
 }
 
-/*-----------------------------------------* 
- * ANIMATIONS                              *
- *-----------------------------------------*/
 
- .js--wp-1,
- .js--wp-2,
- .js--wp-3 {
-     opacity: 0;
-     animation-duration: 1s;
- }
+/* ----------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------- */
 
- .js--wp-4 {
-     animation-duration: 1s;
- }
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
 
- .js--wp-1 .animated, 
- .js--wp-2 .animated, 
- .js--wp-3 .animated {
-     opacity: 1;
- }
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
